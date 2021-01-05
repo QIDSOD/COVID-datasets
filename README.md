@@ -1,9 +1,9 @@
 # COVID-datasets
 
-Include 6 different datasets from different data sources (denoted below) for different research purposes.
+Include 6 different datasets from different data sources (denoted below) for different research purposes. Basically, the datasets include information from 391 different counties in USA at a fixed time or in a series of time periods.
 
 ## Confirmed cases across counties
-Clawed from [Johns Hopkins Cronavirus Resource Center](https://coronavirus.jhu.edu/map.html). Data includes confirmed cases and death from Feb. to Oct. as time series. County number is 391 in total.
+Clawed from [Johns Hopkins Cronavirus Resource Center](https://coronavirus.jhu.edu/map.html). Data includes confirmed cases and death from Jan. to Aug. as time series. County number is 391 in total.
 
 
 ## Distance matrix across counties
@@ -21,6 +21,8 @@ Clawed and pre-processed from [Google Trend](https://trends.google.com/trends/?g
 | Self-monitoring  | Anti-viral medicines   | Personal protective equipment  |
 | N95 respirator | Vaccine  | Ventilator  |
 | Centers for Disease Control and Prevention  |  |  |
+
+————**Update Jan. 2021:** Google Trend data of Nov. and Dec., 2020 has been uploaded.
 
 
 ## Population mobility across counties
@@ -41,7 +43,7 @@ Clawed and pre-processed from [Google Trend](https://trends.google.com/trends/?g
 
 ## Twitter bipartite graph
 Clawed and pre-processed from [Twitter](https://twitter.com). We firstly collected 54 official accounts who have posted COVID19 related information. Then we claw top followers of them, and compute a "COVID attention score" for followers' counties. Counties are 391 in total. "COVID attention score" is computed as 
-<img src="http://chart.googleapis.com/chart?cht=tx&chl= $f(\mathcal{X}) = \sum_{i=1}^{N} e^{-x}$" style="border:none;">， where N here denotes the total number of the followers in a county, and x here denotes the average post interval of a follower's recent 20 (or less) posts. We directly use 0 to denote followers with only 1 post or with no post.
+<img src="http://chart.googleapis.com/chart?cht=tx&chl= $f(\mathcal{X}) = \sum_{i=1}^{N} e^{-x}$" style="border:none;">， where N here denotes the total number of the followers in a county, and x here denotes the average post interval time (days) of a follower's recent 20 (or less) posts. We directly use 0 to denote followers with only 1 post or no post.
 
 
 
